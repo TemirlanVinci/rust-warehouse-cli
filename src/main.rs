@@ -17,7 +17,6 @@ fn main() {
     let mut warehouse = Vec::new();
 
     loop {
-        // Добавил отступы для красоты
         println!("\n---------------------------------");
         println!("WAREHOUSE MANAGER CLI");
         println!("1. Add Item");
@@ -32,8 +31,6 @@ fn main() {
             .read_line(&mut state)
             .expect("Failed to read line");
 
-        // Добавил проверку на пустой ввод, чтобы не крашилось сразу,
-        // но оставил твой unwrap() как основной метод
         let state: u32 = match state.trim().parse() {
             Ok(num) => num,
             Err(_) => {
@@ -74,12 +71,10 @@ fn main() {
 
             2 => {
                 println!("\n[WAREHOUSE LIST]");
-                // Вынес заголовок ДО цикла, чтобы он не дублировался
                 if warehouse.is_empty() {
                     println!("The warehouse is empty.");
                 } else {
                     for (index, item) in warehouse.iter().enumerate() {
-                        // Добавил вывод индекса, чтобы было удобно удалять/смотреть детали
                         println!("{}. {}", index, item.name);
                     }
                 }
