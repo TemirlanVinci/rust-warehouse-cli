@@ -19,4 +19,5 @@ Make sure you have [Rust and Cargo](https://www.rust-lang.org/tools/install) ins
 1. Clone the repository:
    ```bash
    git clone [https://github.com/YOUR_USERNAME/rust-warehouse-cli.git](https://github.com/TemirlanVinci/rust-warehouse-cli.git)
-   cd rust-warehouse-cli
+2. Navigate to the project folder.
+3. Run the game. (cargo run)
